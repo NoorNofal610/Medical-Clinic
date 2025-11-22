@@ -123,7 +123,8 @@ export default function Navbar() {
                   className="flex items-center gap-2 p-2 rounded-full bg-blue-700 hover:bg-blue-800 transition hover:scale-105 active:scale-95"
                 >
                   <div className="w-10 h-10 rounded-full bg-white text-blue-600 flex items-center justify-center font-bold shadow-md">
-                    {user.name.charAt(0).toUpperCase()}
+                  {user?.name?.charAt(0).toUpperCase()}
+
                   </div>
                 </button>
                 {showUserMenu && (
@@ -131,7 +132,8 @@ export default function Navbar() {
                     <div className="p-4 bg-gray-50 border-b border-gray-200">
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-full bg-gray-300 text-gray-700 flex items-center justify-center font-bold">
-                          {user.name.charAt(0).toUpperCase()}
+                        {user?.name?.charAt(0).toUpperCase()}
+
                         </div>
                         <div>
                           <p className="font-semibold text-gray-800">{user.name}</p>
